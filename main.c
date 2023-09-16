@@ -1,11 +1,9 @@
-#include "time.h"
-#include "partida.h"
+#include "torneio.h"
 #include <stdio.h>
 
 int main(){
-    tTime times[100];
-    tPartida partidas[100];
-
-
+    tTorneio torneio;
+    torneio = IniciaTorneio();
+    ResultadosTorneio(torneio);
     return 0;
 }

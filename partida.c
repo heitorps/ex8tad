@@ -3,8 +3,8 @@
 
 tPartida LePartida(){
     tPartida par;
-    scanf("%s @ %s %d %d%*c",par.timeFora,par.timeCasa,&par.pontosFora,
-                                                        par.pontosCasa);
+    scanf("%s @ %s %d %d/n",par.timeFora,par.timeCasa,&par.pontosFora,
+                                                       &par.pontosCasa);
     
     return par;
 }

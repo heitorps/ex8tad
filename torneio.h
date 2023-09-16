@@ -11,6 +11,10 @@ typedef struct{
 }tTorneio;
 
 tTorneio IniciaTorneio();
+tTorneio JogaPartida(tTorneio torneio);
+
+int AchaVencedor(tTorneio torneio, tPartida partida);
+int AchaPerdedor(tTorneio torneio, tPartida partida);
 
 void ResultadosTorneio(tTorneio torneio);
 

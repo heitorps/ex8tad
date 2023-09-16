@@ -24,11 +24,14 @@ int TotalVitorias(tTime time){
 }
 
 float WinRateTimte(tTime time){
-    return(TotalVitorias(time)/(TotalVitorias(time)+time.der));
+    if((TotalVitorias(time)+time.der))return(TotalVitorias(time)/(TotalVitorias(time)+time.der));
+    else return 0;
 }
 
 void ImprimeTime(tTime time){
-    char abrev[3] = strcmp(time.conf,"LESTE") ? "CO" : "CL";
+    char abrev[3];
+    !(strcmp(time.conf,"LESTE")) ? strcpy(abrev,"CL") : strcpy(abrev,"CO");
+
     printf("%s [%s] %d %d %.2f %d %d\n",time.nome,abrev,TotalVitorias(time),
                                         time.der,WinRateTimte(time),
                                         time.vCasa,time.vFora);
